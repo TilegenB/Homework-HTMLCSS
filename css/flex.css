@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 18px;
+}
+.container {
+    width: 800px;
+    height: 600px;
+    border: 1px solid;
+}
+.item {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+}
+.display-inline-block div{
+    display: inline-block;
+    vertical-align: top;
+    background-color: mediumseagreen;
+}
+.flex {
+    display: flex;
+    background-color: tomato;
+}
+.float-left {
+    float: left;
+    background-color: steelblue;
+}
+.float-right {
+    float: right;
+    background-color: steelblue;
+}
+.float{
+    background-color: steelblue;
+}
