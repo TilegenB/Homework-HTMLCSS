@@ -43,7 +43,7 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 .button {
     font-family: 'Open Sans', 'Arial', sans-serif;
     font-weight: 600;
@@ -54,7 +54,7 @@ body {
     text-transform: capitalize;
     color:var(--secondary-color);
     text-decoration: none;
-    background: transparent;git
+    background: transparent;
 }
 .button--white {
     border: 2px solid #fff;
@@ -115,6 +115,8 @@ body {
 }
 .header {
     background-color: var(--black-bacground-color);
+    position: sticky;
+    top: 0px;
 }
 .header-nav {
     display: flex;
@@ -152,6 +154,7 @@ body {
     position: relative;
     width: 100%;
     background: url(../img/header-background.jpg) center no-repeat;
+    background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
     padding: 60px 170px;
@@ -251,7 +254,6 @@ body {
     min-height: 140px;
     display: flex;
     flex-flow: row wrap;
-    margin-bottom: 100px;
 }
 .social-wrapper {
     align-items: center;
@@ -289,29 +291,40 @@ body {
 .social-img:hover {
     color: var(--secondary-color);
 }
-.social-img--facebook {
-    background-image: url(../img/facebook_icon.svg);
+.facebook_icon,
+.twitter_icon,
+.linkedin_icon,
+.pinterest_icon,
+.instagram_icon,
+.github_icon,
+.rss_icon  {
+    fill: #ccc;
+    transition: all .1s linear;
 }
-.social-img--twitter {
-    background-image: url(../img/twitter_icon.svg);
+
+.facebook_icon:hover {
+    fill: #3b5998;
 }
-.social-img--linkedin {
-    background-image: url(../img/linkedin_icon.svg);
+.twitter_icon:hover {
+    fill: #00acee;
 }
-.social-img--pinterest {
-    background-image: url(../img/pinterest_icon.svg);
+.linkedin_icon:hover {
+    fill: #0077b5	;
 }
-.social-img--instagram {
-    background-image: url(../img/instagram_icon.svg);
+.pinterest_icon:hover {
+    fill: #c8232c;
 }
-.social-img--github {
-    background-image: url(../img/github_icon.svg);
+.instagram_icon:hover {
+    fill: #30618A;
 }
-.social-img--rss {
-    background-image: url(../img/rss_icon.svg);
+.github_icon:hover {
+    fill:#333333;
+}
+.rss_icon:hover {
+    fill: #ee802f;
 }
 .tabs {
-    margin-bottom: 100px;
+    padding-top: 100px;
 }
 .tabs__item {
     display: flex;
@@ -362,6 +375,9 @@ body {
         "tabs-title tabs-title tabs-title"
         "tabs-text tabs-text tabs-text"
         "tabs-download-button tabs-download-button tabs-download-button";
+}
+.about {
+    padding-top: 100px;
 }
 .about-list {
     display: flex;
@@ -470,6 +486,7 @@ body {
     background-color: var(--reviews-background);
     padding: 40px 20px;
     margin-bottom: 60px;
+    z-index: -1;
 }
 .reviews-item-text::after {
     position: absolute;
@@ -499,11 +516,15 @@ body {
 }
 .banner {
     color: var(--secondary-color);
-    background: url(../img/banner-background.jpg) center no-repeat;
+    background-image: url(../img/banner-background.jpg);
+    background-color:  rgba(0, 0, 0, .5);
+    background-blend-mode:multiply;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    z-index: -1;
 }
-.banner::after {
+/* .banner::after {
     position: absolute;
     content:"";
     top: 0;
@@ -512,7 +533,7 @@ body {
     left: 0;
     z-index: 1;
     background: rgba(0, 0, 0, .5);
-}
+} */
 .banner-content {
     position: relative;
     display: flex;
@@ -521,7 +542,7 @@ body {
     align-items: center;
     min-height: 440px;
     padding: 50px 150px;
-    z-index: 10;
+    /* z-index: 10; */
 }
 .banner-title {
     font-size: 36px;
